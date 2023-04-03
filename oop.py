@@ -1,25 +1,25 @@
-class Cat:
+class fish():
     name = None
+    color = None
     age = None
-    isHappy = None
+    issmall = None
 
-    def set_data(self, name , age , isHappy):
+    def __init__(self,name,color,age,issmall):
+        self.set_data(name, color, age, issmall)
+        self.get_data()
+
+
+    def set_data(self,name,color,age,issmall ):
         self.name = name
+        self.color = color
         self.age = age
-        self.isHappy = isHappy
-
+        self.issmall = issmall
 
     def get_data(self):
-        print(self.name, "age" ,self.age,"happy" ,self.isHappy)
+        print(self.name,"color:",self.color,"age:",self.age,"small:",self.issmall)
 
-cat1 = Cat()
-cat1.set_data("barsik", 3, True)
+fish1 = fish("Dory","blue",5,True)
+fish2 = fish("Nemo","orange",6,True)
 
 
-cat2 = Cat()
-cat2.name = "mia"
-cat2.age = 2
-cat2.isHappy = False
 
-cat1.get_data()
-cat2.get_data()
